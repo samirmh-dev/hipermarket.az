@@ -1,0 +1,178 @@
+$nav:#172029
+$formText:#999
+$qirmizi:#B11E22
+
+
+#qeydiyyat
+  width: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  padding-top: 60px
+  font-family: regular,sans-serif
+  h1
+    font-size: 30px
+    font-family: bold,sans-serif
+    letter-spacing: 3px
+  >span
+    margin-top: 40px
+    margin-bottom: 20px
+    a
+      color: $qirmizi
+  form
+    width: 870px
+    min-height: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+    padding: 90px 60px 60px
+    box-shadow: inset 0 7em 10em -5em rgba(255,255,255,0.6), 0 0.3em 0.5em -0.2em rgba(100,100,100,1),0 1em 2em -0.75em rgba(100,100,100,0.75),0 1em 3em -0.5em rgba(100,100,100,0.5),0 3em 3em -0.25em rgba(100,100,100,0.2)
+
+    .formGroup:nth-of-type(2n-1)
+      margin-right: 10px
+    .formGroup
+      position: relative
+      margin-bottom: 36px
+      height: 75px
+      width: 330px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex-direction: column
+      .error
+        color: $qirmizi
+        margin-top: 5px
+        display: block
+        width: 100%
+      input[type=text],
+      input[type=password],
+      input[type=date]
+        font-size: 18px
+        padding: 10px 10px 10px 5px
+        width: 330px
+        border: none
+        border-bottom: 1px solid $nav
+        &:focus
+          outline: none
+          &~label
+            top: -20px
+            font-size: 16px
+            color: $nav
+          &~.bar:before,
+          &~.bar:after
+            width: 50%
+        &:valid~label
+          top: -20px
+          font-size: 16px
+          color: $nav
+        &[type=date]~label
+          top: -20px
+          font-size: 16px
+          color: $nav
+      label
+        color: $formText
+        font-size: 18px
+        font-weight: normal
+        position: absolute
+        pointer-events: none
+        left: 5px
+        top: 10px
+        transition: 0.2s ease all
+        -moz-transition: 0.2s ease all
+        -webkit-transition: 0.2s ease all
+    input[type=submit]
+      width: 150px
+      height: 45px
+      padding: 0 15px
+      font-family: bold,sans-serif
+      background-color: #B11E22
+      font-size: 18px
+      color: #fff
+      cursor: pointer
+      border: 1px solid transparent
+      outline: none
+      box-shadow: 0 7em 10em -5em rgba(255,255,255,0.6), 0 0.3em 0.5em -0.2em rgba(100,100,100,1),0 1em 2em -0.75em rgba(100,100,100,0.75),0 1em 3em -0.5em rgba(100,100,100,0.5),0 3em 3em -0.25em rgba(100,100,100,0.2)
+    #login-action
+      width: 330px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: relative
+      margin-bottom: 40px
+      label
+        position: absolute
+        left: 0
+      a
+        color: $qirmizi
+        &:hover
+          color: $qirmizi
+        &:visited
+          color: $qirmizi
+        &:link
+          color: $qirmizi
+        &:focus
+          color: $qirmizi
+
+.bar
+  position: relative
+  display: block
+  width: 330px
+  &:before,
+  &:after
+    content: ''
+    height: 2px
+    width: 0
+    bottom: 1px
+    position: absolute
+    background-color: $nav
+    transition: 0.2s ease all
+    -moz-transition: 0.2s ease all
+    -webkit-transition: 0.2s ease all
+  &:before
+    left: 50%
+  &:after
+    right: 50%
+
+.highlight
+  position: absolute
+  height: 60%
+  width: 100px
+  top: 25%
+  left: 0
+  pointer-events: none
+  opacity: .5
+
+@media (max-width: 768px) and (min-width: 463px)
+  #qeydiyyat
+    margin-top: 15px
+    form
+      width: 420px!important
+      .formGroup:nth-of-type(2n-1)
+        margin-right: 0!important
+
+@media (max-width: 462px)
+  #qeydiyyat
+    form
+      width: 300px!important
+      .formGroup
+        width: 250px
+        input[type=text],
+        input[type=password],
+        input[type=date],
+        .bar
+          width: 250px
+      .formGroup:nth-of-type(2n-1)
+        margin-right: 0!important
+      #login-action
+        width: 280px
+    >span
+      padding: 0px 20px
+      text-align: center
+@media (max-width: 932px) and (min-width: 768px)
+  #qeydiyyat
+    form
+      width: 400px!important

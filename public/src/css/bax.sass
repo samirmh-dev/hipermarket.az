@@ -1,0 +1,142 @@
+$text-color: #1B252F
+$qirmizi:#B11E22
+$nav:#172029
+$header:#1B252F
+#mal-baxis
+  padding: 0 50px
+  width: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  >section:nth-of-type(1)
+    padding: 25px 0
+    display: flex
+    flex-wrap: wrap
+    font-size: 14px
+    font-family: bold,sans-serif
+    a
+      color: $text-color
+      text-decoration: underline
+  >section:nth-of-type(2)
+    padding: 25px 0
+    display: flex
+    >section
+      width: 50%
+      padding: 0 20px
+      &:nth-of-type(1)
+        display: flex
+        flex-direction: column
+        align-items: center
+        >section
+          width: 329px
+          display: flex
+          >ul
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            li
+              width: calc(100% / 5)
+              a
+                cursor: pointer
+                img
+                  width: 100%
+                  height: auto
+      &:nth-of-type(2)
+        display: flex
+        >section:nth-of-type(1)
+          padding: 0 10px
+          padding-top: 15px
+          width: 100%
+          display: flex
+          flex-direction: column
+          >span:nth-of-type(1)
+            font-size: 25px
+            font-family: bold, sans-serif
+          >span:nth-of-type(2)
+            font-size: 15px
+            color: grey
+            margin: 20px 0
+            font-family: bold, sans-serif
+          >select
+            margin: 20px 0
+            padding: 8px
+          >span:nth-of-type(4)
+            display: flex
+            align-items: center
+            >span:nth-of-type(1)
+              display: flex
+              flex-direction: column
+              justify-content: center
+              s
+                color: dimgrey
+                font-size: 15px
+            >span:nth-of-type(2)
+              margin-left: 15px
+              font-size: 20px
+              width: 80px
+              text-align: center
+              font-family: bold, sans-serif
+              padding: 15px
+              background-color: $qirmizi
+              color: white
+          span.qiymet
+            font-size: 30px
+            font-family: bold, sans-serif
+            margin: 30px 0
+          a
+            width: 100%
+            margin-bottom: 8px
+            text-align: center
+            padding: 10px
+            color: $header
+            border: 1px solid #dbdbdb
+            border-radius: 3px
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04)
+            transition: .2s ease-in-out
+            &:hover
+              background-color: $qirmizi
+              color: white
+              border-color: $qirmizi
+            &:nth-of-type(2)
+              margin-bottom: 0
+  >section:nth-of-type(3)
+    display: flex
+    >section
+      display: flex
+      width: 50%
+      padding: 25px 15px
+.bx-wrapper:nth-of-type(1)
+  width: 329px!important
+  margin-bottom: 15px
+
+.table
+  width: 100%
+  max-width: 100%
+  margin-bottom: 1rem
+  background-color: transparent
+
+table
+  border-collapse: collapse
+
+.table td, .table th
+  padding: .75rem
+  vertical-align: top
+  border-top: 1px solid #e9ecef
+
+
+@media (max-width: 768px)
+  #mal-baxis
+    padding-left: 5px
+    padding-right: 5px
+    .qiymet
+      text-align: center
+      display: flex
+      justify-content: center
+    >section:nth-of-type(2),
+    >section:nth-of-type(3)
+      flex-direction: column
+      >section
+        width: 100%

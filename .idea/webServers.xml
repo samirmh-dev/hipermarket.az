@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f029214a-af19-4f87-b719-218893fe1f37" name="hipermarket" url="http://neyromarketinq.com">
+        <fileTransfer host="neyromarketinq.com" port="21" rootFolder="/hipermarket.az">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

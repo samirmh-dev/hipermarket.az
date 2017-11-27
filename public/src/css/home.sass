@@ -1,0 +1,191 @@
+$header:#1B252F
+$qirmizi:#B11E22
+#home
+  padding: 0 50px
+  width: 100%
+  margin-top: 25px
+  display: flex
+  flex-direction: column
+  >#butun
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    >a
+      text-align: center
+      padding: 10px
+      color: white
+      border: 1px solid #dbdbdb
+      border-radius: 3px
+      box-shadow: 0 0 25px 0 rgba(0,0,0,0.04)
+      transition: .2s ease-in-out
+      background-color: $qirmizi
+
+  >section
+    width: 100%
+    max-width: 1450px
+    display: flex
+    position: relative
+    margin: 0 auto
+    flex-direction: column
+    .basliq
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      h1
+        width: 17%
+      hr
+        width: 100%
+        border-bottom-color: $header
+    .mallar
+      margin: 30px 0
+      display: flex
+      justify-content: flex-start
+      flex-wrap: wrap
+      align-items: flex-start
+      >.mallar-item
+        &:hover > section:last-of-type
+          opacity: 1
+          visibility: visible
+        position: relative
+        width: calc(25% - 17px)
+        margin-right: 17px
+        margin-bottom: 15px
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        padding: 10px
+        border: 1px solid #dbdbdb
+        border-radius: 3px
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04)
+        >a
+          min-height: 247px
+          img
+            width: 185px
+            height: auto
+            cursor: pointer
+            border-radius: 2px
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04)
+        >span:nth-of-type(1)
+          margin-top: 15px
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          max-width: 230px
+        >.endirim
+          position: absolute
+          top: 15px
+          left: -9px
+          width: 50px
+          padding: 5px
+          color: #fff
+          text-align: center
+          background: $qirmizi
+          &:before
+            content: ''
+            position: absolute
+            height: 0
+            width: 0
+            top: 100%
+            left: 0
+            border-top: 8px solid darken($qirmizi,5%)
+            border-left: 9px solid transparent
+        >.qiymet
+          display: flex
+          color: $qirmizi
+          font-family: bold, serif
+          font-size: 22px
+          margin: 15px 0
+          span
+            margin-right: 5px
+        section
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          >a
+            width: 49%
+            text-align: center
+            margin-right: 5px
+            padding: 10px
+            color: $header
+            border: 1px solid #dbdbdb
+            border-radius: 3px
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04)
+            transition: .2s ease-in-out
+            &:hover
+              background-color: $qirmizi
+              color: white
+              border-color: $qirmizi
+            &:nth-of-type(2)
+              margin-right: 0
+          >a.nostok
+            background-color: $qirmizi!important
+            border: none
+            color: white
+            cursor: context-menu
+            display: flex
+            align-items: center
+            justify-content: center
+        &:nth-child(4n)
+          margin-right: 0
+        >section:last-of-type
+          position: absolute
+          top: 160px
+          visibility: hidden
+          opacity: 0
+          transition: .2s ease-in-out
+          >a
+            margin-right: 0
+            width: 150px
+            border: 1px solid white
+            background-color: white
+            &:hover
+              background-color: $qirmizi
+              color: white
+              border-color: $qirmizi
+@media (max-width: 669px)
+  #home
+    padding-left: 10px
+    padding-right: 10px
+    >section
+      .basliq
+        h1
+          width: 100% !important
+          &+hr
+            display: none
+      .mallar
+        flex-direction: column
+        align-items: center
+        .mallar-item
+          width: 100% !important
+          margin-right: 0 !important
+@media (min-width: 670px) and (max-width: 1043px)
+  .basliq
+    h1
+      width: 41% !important
+  #encoxsatan .basliq
+    h1
+      width: 63% !important
+  .mallar-item
+    width: calc(50% - 17px) !important
+    margin-right: 34px!important
+    &:nth-child(2n)
+      margin-right: 0!important
+    section
+      >a
+        padding-left: 0!important
+        padding-right: 0 !important
+
+@media (min-width: 999px) and (max-width: 1338px)
+  .mallar-item
+    section
+      >a
+        padding-left: 0!important
+        padding-right: 0 !important
+        font-size: .8rem
